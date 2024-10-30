@@ -1,0 +1,14 @@
+C:\Users\asus\source\repos\HW week 10\HW week 10\bin\Debug\net8.0\HW week 10.exe
+C:\Users\asus\source\repos\HW week 10\HW week 10\bin\Debug\net8.0\HW week 10.deps.json
+C:\Users\asus\source\repos\HW week 10\HW week 10\bin\Debug\net8.0\HW week 10.runtimeconfig.json
+C:\Users\asus\source\repos\HW week 10\HW week 10\bin\Debug\net8.0\HW week 10.dll
+C:\Users\asus\source\repos\HW week 10\HW week 10\bin\Debug\net8.0\HW week 10.pdb
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.AssemblyInfo.cs
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.dll
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\refint\HW week 10.dll
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.pdb
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\HW week 10.genruntimeconfig.cache
+C:\Users\asus\source\repos\HW week 10\HW week 10\obj\Debug\net8.0\ref\HW week 10.dll
