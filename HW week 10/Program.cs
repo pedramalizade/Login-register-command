@@ -1,38 +1,48 @@
 ﻿
+//InMemoryDB db = new InMemoryDB();
+//UserService userService = new UserService(db);
 
-InMemoryDB db = new InMemoryDB();
+using HW_week_10.contract;
+
+string connectionString = "Server=DESKTOP-O8SFUP7\\SQLEXP; DataBase=HW 10; Integrated Security=True; TrustServerCertificate=True;";
+UserRepository userRepo = new UserRepository(connectionString);
+UserService userService = new UserService(userRepo);
 User loggedIn = null;
-UserService userService = new UserService(db);
 
 
-while (true)
+
+start();
+
+void start()
 {
-    Console.Write("Enter command:");
-    string command = Console.ReadLine();
-    try
+    while (true)
     {
-        ProcessCommand(command);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"An error occurred: {ex.Message}");
+        Console.Write("Enter command:");
+        string command = Console.ReadLine();
+        try
+        {
+            CheckCommand(command);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error : {ex.Message}");
+        }
     }
 }
 
-
-void ProcessCommand(string command)
+void CheckCommand(string command)
 {
     try
     {
+
         string[] parts = command.Split("--");
         if (parts.Length < 2)
         {
             Console.WriteLine("Invalid command format.");
             return;
         }
-
-        string instruction = parts[0].Trim().ToLower();
         var parameters = new Dictionary<string, string>();
+        string order = parts[0].Trim().ToLower();
 
         for (int i = 1; i < parts.Length; i++)
         {
@@ -43,7 +53,7 @@ void ProcessCommand(string command)
             }
         }
 
-        switch (instruction)
+        switch (order)
         {
             case "register":
                 userService.Register(parameters); break;
@@ -57,7 +67,9 @@ void ProcessCommand(string command)
                 userService.ChangePassword(loggedIn, parameters); break;
             case "logout":
                 userService.Logout();
-                loggedIn = null;
+                Console.WriteLine("logout successfully.");
+                start();
+
                 break;
             default:
                 Console.WriteLine("Unknown command."); break;
@@ -65,7 +77,7 @@ void ProcessCommand(string command)
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"Error processing command: {ex.Message}");
+        Console.WriteLine($"Error : {ex.Message}");
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW_week_10.contract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,14 +8,16 @@ using System.Xml.Schema;
 //using HW_week_10.Interface;
 class UserService
 {
-    private InMemoryDB db;
+    User loggedIn = null;
 
-    public UserService(InMemoryDB db)
+    private UserRepository userRepo;
+    public UserService(UserRepository userRepo)
     {
-        this.db = db;
+        this.userRepo = userRepo;
     }
 
     public void Register(Dictionary<string, string> parameters)
+    
     {
         try
         {
@@ -23,23 +26,14 @@ class UserService
                 Console.WriteLine("Invalid register command.");
                 return;
             }
+            string X = parameters["username"];
+            string Y = parameters["password"];
 
-            string username = parameters["username"];
-            string password = parameters["password"];
-
-            if (db.Users.Exists(u => u.Username == username))
-            {
-                Console.WriteLine("Register failed! Username already exists.");
-            }
-            else
-            {
-                db.Users.Add(new User(username, password));
-                Console.WriteLine("User registered successfully.");
-            }
+            userRepo.Register(X, Y);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error during registration: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}");
         }
     }
 
@@ -52,36 +46,34 @@ class UserService
                 Console.WriteLine("Invalid login command.");
                 return null;
             }
-
             string X = parameters["username"];
             string Y = parameters["password"];
 
-            User user = db.Users.Find(u => u.Username == X && u.Password == Y);
-            if (user != null)
+            var user = userRepo.Login(X, Y);
+            if(user != null)
             {
-                Console.WriteLine("Login successful.");
-                return user;
+                Console.WriteLine("Login Successful.");
             }
             else
             {
-                Console.WriteLine("Login failed! Incorrect username or password.");
-                return null;
+                Console.WriteLine("Incorrect Username or Password.");
             }
+            return user;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error during login: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}");
             return null;
         }
     }
 
-    public void ChangeStatus(User loggedInUser, Dictionary<string, string> parameters)
+    public void ChangeStatus(User loggedIn, Dictionary<string, string> parameters)
     {
         try
         {
-            if (loggedInUser == null)
+            if (loggedIn == null)
             {
-                Console.WriteLine("Access denied! Please login first.");
+                Console.WriteLine("Please login first.");
                 return;
             }
 
@@ -92,8 +84,9 @@ class UserService
             }
 
             string status = parameters["status"];
-            loggedInUser.Status = status;
-            Console.WriteLine($"Status changed to {status}.");
+            userRepo.ChangeStatus(loggedIn, status);
+            //loggedIn.Status = status;
+            //Console.WriteLine($"Status changed to {status}.");
         }
         catch (Exception ex)
         {
@@ -111,13 +104,11 @@ class UserService
                 return;
             }
 
-            string usernameQuery = parameters["username"].ToLower();
-            foreach (var user in db.Users)
+            string username = parameters["username"].ToLower();
+            var users = userRepo.Search(username);
+            foreach(var user in users)
             {
-                if (user.Username.ToLower().Contains(usernameQuery))
-                {
-                    Console.WriteLine($"{user.Username} | status: {user.Status}");
-                }
+                Console.WriteLine($"Username : {user.Username} | Status {user.Status}");
             }
         }
         catch (Exception ex)
@@ -126,13 +117,13 @@ class UserService
         }
     }
 
-    public void ChangePassword(User loggedInUser, Dictionary<string, string> parameters)
+    public void ChangePassword(User loggedIn, Dictionary<string, string> parameters)
     {
         try
         {
-            if (loggedInUser == null)
+            if (loggedIn == null)
             {
-                Console.WriteLine("Access denied! Please login first.");
+                Console.WriteLine("Please login first.");
                 return;
             }
 
@@ -142,22 +133,14 @@ class UserService
                 return;
             }
 
-            string oldPassword = parameters["old"];
-            string newPassword = parameters["new"];
+            string oldPass = parameters["old"];
+            string newPass = parameters["new"];
 
-            if (loggedInUser.Password == oldPassword)
-            {
-                loggedInUser.Password = newPassword;
-                Console.WriteLine("Password changed successfully.");
-            }
-            else
-            {
-                Console.WriteLine("Change password failed! Incorrect old password.");
-            }
+            userRepo.ChangePassword(loggedIn, oldPass, newPass);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error changing password: {ex.Message}");
+            Console.WriteLine($"Error: {ex.Message}");
         }
     }
 
@@ -165,11 +148,19 @@ class UserService
     {
         try
         {
-            Console.WriteLine("Logout successful.");
+            if(loggedIn == null)
+            {
+                Console.WriteLine("not User loged in");
+            }
+            else
+            {
+                loggedIn = null;
+                Console.WriteLine("Logout successfully");
+            }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error during logout: {ex.Message}");
+            Console.WriteLine($"Error : {ex.Message}");
         }
     }
 }

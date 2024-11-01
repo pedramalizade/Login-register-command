@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\asus\\source\\repos\\HW week 10\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|c:\\users\\asus\\source\\repos\\hw week 10\\hw week 10\\contract\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|solutionrelative:hw week 10\\contract\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|c:\\users\\asus\\source\\repos\\hw week 10\\hw week 10\\entitis\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|solutionrelative:hw week 10\\entitis\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|c:\\users\\asus\\source\\repos\\hw week 10\\hw week 10\\coniguration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|solutionrelative:hw week 10\\coniguration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB8BA73E-1FE5-49AB-9881-995117E73489}|HW week 10\\HW week 10.csproj|c:\\users\\asus\\source\\repos\\hw week 10\\hw week 10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,55 +42,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\User.cs",
+              "RelativeDocumentMoniker": "HW week 10\\Entitis\\User.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\User.cs",
+              "RelativeToolTip": "HW week 10\\Entitis\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:44:57.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\contract\\UserRepository.cs",
+              "RelativeDocumentMoniker": "HW week 10\\contract\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\contract\\UserRepository.cs",
+              "RelativeToolTip": "HW week 10\\contract\\UserRepository.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:32:03.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Coniguration\\Configuration.cs",
+              "RelativeDocumentMoniker": "HW week 10\\Coniguration\\Configuration.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Coniguration\\Configuration.cs",
+              "RelativeToolTip": "HW week 10\\Coniguration\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T05:52:57.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\UserService.cs",
               "RelativeDocumentMoniker": "HW week 10\\Entitis\\UserService.cs",
               "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\UserService.cs",
               "RelativeToolTip": "HW week 10\\Entitis\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAmwJEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T18:52:28.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\User.cs",
-              "RelativeDocumentMoniker": "HW week 10\\Entitis\\User.cs",
-              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Entitis\\User.cs",
-              "RelativeToolTip": "HW week 10\\Entitis\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:52:03.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InMemoryDB.cs",
-              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Data\\InMemoryDB.cs",
-              "RelativeDocumentMoniker": "HW week 10\\Data\\InMemoryDB.cs",
-              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Data\\InMemoryDB.cs",
-              "RelativeToolTip": "HW week 10\\Data\\InMemoryDB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:51:22.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Program.cs",
               "RelativeDocumentMoniker": "HW week 10\\Program.cs",
               "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Program.cs",
               "RelativeToolTip": "HW week 10\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAJAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwEIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T15:20:15.716Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InMemoryDB.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Data\\InMemoryDB.cs",
+              "RelativeDocumentMoniker": "HW week 10\\Data\\InMemoryDB.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\HW week 10\\HW week 10\\Data\\InMemoryDB.cs",
+              "RelativeToolTip": "HW week 10\\Data\\InMemoryDB.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:51:22.188Z"
             }
           ]
         }
